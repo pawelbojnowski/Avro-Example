@@ -1,0 +1,6 @@
+{
+  "type": "error",
+  "name": "Error",
+  "namespace": "pl.pb.avroexample.rpcmessages.avsc",
+  "fields": []
+}

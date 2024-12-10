@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "OrderItem",
+  "namespace": "pl.pb.avroexample.annotation.avsc",
+  "fields": [
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "price",
+      "type": {
+        "type": "string",
+        "java-class": "java.math.BigDecimal"
+      }
+    },
+    {
+      "name": "metadata",
+      "type": {
+        "type": "map",
+        "values": "string",
+        "java-key-class": "pl.pb.avroexample.annotation.avsc.MetadataKey"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+@namespace("pl.pb.avroexample.errormessage.avdl")
+protocol ErrorMessageData {
+
+	error ErrorMessage {
+		string stacktrace;
+		string message;
+	}
+}

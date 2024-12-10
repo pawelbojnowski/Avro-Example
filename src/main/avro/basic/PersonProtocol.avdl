@@ -1,0 +1,10 @@
+@namespace("pl.pb.avroexample.basic.avdl")
+protocol PersonData {
+
+	record Person {
+		string firstName;
+		string lastName;
+		int age;
+
+	}
+}

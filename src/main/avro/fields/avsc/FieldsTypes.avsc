@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "FieldsTypes",
+  "namespace": "pl.pb.avroexample.fields.avsc",
+  "fields": [
+    {
+      "name": "optionalFiled",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "withDefaultValue",
+      "type": "string",
+      "default": "some value"
+    },
+    {
+      "name": "fieldAcceptDiffrettypes",
+      "type": [
+        "null",
+        "string",
+        "float"
+      ]
+    }
+  ]
+}

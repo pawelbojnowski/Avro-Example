@@ -1,0 +1,19 @@
+{
+  "namespace": "pl.pb.avroexample.basic.avcs",
+  "name": "Person",
+  "type": "record",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    }
+  ]
+}

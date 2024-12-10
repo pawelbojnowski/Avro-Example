@@ -1,0 +1,221 @@
+{
+  "protocol": "TypesData",
+  "namespace": "pl.pb.avroexample.types.avpr",
+  "types": [
+    {
+      "type": "record",
+      "name": "PrimitiveTypes",
+      "fields": [
+        {
+          "name": "someInt",
+          "type": "int"
+        },
+        {
+          "name": "someLong",
+          "type": "long"
+        },
+        {
+          "name": "someString",
+          "type": "string"
+        },
+        {
+          "name": "someBoolean",
+          "type": "boolean"
+        },
+        {
+          "name": "someFloat",
+          "type": "float"
+        },
+        {
+          "name": "someDouble",
+          "type": "double"
+        },
+        {
+          "name": "someNull",
+          "type": "null"
+        },
+        {
+          "name": "someBytes",
+          "type": "bytes"
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "LogicalTypes",
+      "fields": [
+        {
+          "name": "someDecimal",
+          "type": {
+            "type": "bytes",
+            "logicalType": "decimal",
+            "precision": 9,
+            "scale": 2
+          }
+        },
+        {
+          "name": "someDate",
+          "type": {
+            "type": "int",
+            "logicalType": "date"
+          }
+        },
+        {
+          "name": "someTimeMs",
+          "type": {
+            "type": "int",
+            "logicalType": "time-millis"
+          }
+        },
+        {
+          "name": "someTimestampMs",
+          "type": {
+            "type": "long",
+            "logicalType": "timestamp-millis"
+          }
+        },
+        {
+          "name": "someLocalMimestampMs",
+          "type": {
+            "type": "long",
+            "logicalType": "local-timestamp-millis"
+          }
+        },
+        {
+          "name": "someUuid",
+          "type": {
+            "type": "string",
+            "logicalType": "uuid"
+          }
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "LogicalAsRawTypes",
+      "fields": [
+        {
+          "name": "someDate",
+          "type": {
+            "type": "int",
+            "logicalType": "date"
+          }
+        },
+        {
+          "name": "someDimeMillis",
+          "type": {
+            "type": "int",
+            "logicalType": "time-millis"
+          }
+        },
+        {
+          "name": "someTimeMicros",
+          "type": {
+            "type": "long",
+            "logicalType": "time-micros"
+          }
+        },
+        {
+          "name": "someTimestampMillis",
+          "type": {
+            "type": "long",
+            "logicalType": "timestamp-millis"
+          }
+        },
+        {
+          "name": "someTimestampMicros",
+          "type": {
+            "type": "long",
+            "logicalType": "timestamp-micros"
+          }
+        },
+        {
+          "name": "someTimedelta",
+          "type": {
+            "type": "double",
+            "logicalType": "timedelta"
+          }
+        },
+        {
+          "name": "someUuid",
+          "type": {
+            "type": "string",
+            "logicalType": "uuid"
+          }
+        },
+        {
+          "name": "someDecimal",
+          "type": {
+            "type": "bytes",
+            "logicalType": "decimal(9,2))"
+          }
+        }
+      ]
+    },
+    {
+      "type": "enum",
+      "name": "EnumType",
+      "symbols": [
+        "Enum1",
+        "Enum2",
+        "Enum3",
+        "Enum4"
+      ]
+    },
+    {
+      "type": "fixed",
+      "name": "MD5",
+      "size": 16
+    },
+    {
+      "type": "record",
+      "name": "ComplexTypes",
+      "fields": [
+        {
+          "name": "enumType",
+          "type": "EnumType"
+        },
+        {
+          "name": "arrayTypes",
+          "type": {
+            "type": "array",
+            "items": "string"
+          }
+        },
+        {
+          "name": "mapTypes",
+          "type": {
+            "type": "map",
+            "values": "string"
+          }
+        },
+        {
+          "name": "unionTypes",
+          "type": [
+            "null",
+            "string",
+            "int"
+          ]
+        },
+        {
+          "name": "fixedTypes",
+          "type": "MD5"
+        },
+        {
+          "name": "nestedComplexTypes",
+          "type": {
+            "type": "record",
+            "name": "NestedComplexTypes",
+            "fields": [
+              {
+                "name": "nestedComplexTypesValue",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "messages": {}
+}

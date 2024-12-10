@@ -1,0 +1,54 @@
+@namespace("pl.pb.avroexample.types.avdl")
+protocol TypesData {
+
+	record PrimitiveTypes {
+		int someInt;
+		long someLong;
+		string someString;
+		boolean someBoolean;
+		float someFloat;
+		double someDouble;
+		null someNull;
+		bytes someBytes;
+	}
+
+	record LogicalTypes {
+		decimal(9,2) someDecimal;
+		date someDate;
+		time_ms someTimeMs;
+		timestamp_ms someTimestampMs;
+		local_timestamp_ms someLocalMimestampMs;
+		uuid someUuid;
+	}
+
+	record LogicalAsRawTypes {
+		@logicalType("date") int someDate;
+		@logicalType("time-millis") int someDimeMillis;
+		@logicalType("time-micros") long someTimeMicros;
+		@logicalType("timestamp-millis") long someTimestampMillis;
+		@logicalType("timestamp-micros") long someTimestampMicros;
+		@logicalType("timedelta") double someTimedelta;
+		@logicalType("uuid") string someUuid;
+		@logicalType("decimal(9,2))") bytes someDecimal;
+	}
+
+	//ComplexTypes
+	enum EnumType {
+		Enum1, Enum2, Enum3, Enum4
+	}
+
+	fixed MD5(16);
+
+	record ComplexTypes {
+		EnumType enumType;
+		array<string> arrayTypes;
+		map<string> mapTypes;
+		union{null, string, int} unionTypes;
+		MD5 fixedTypes;
+		NestedComplexTypes nestedComplexTypes;
+	}
+
+	record NestedComplexTypes {
+		string nestedComplexTypesValue;
+	}
+}

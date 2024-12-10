@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "MetadataKey",
+  "namespace": "pl.pb.avroexample.annotation.avsc",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    }
+  ]
+}

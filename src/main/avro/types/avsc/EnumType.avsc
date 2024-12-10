@@ -1,0 +1,11 @@
+{
+  "type": "enum",
+  "name": "EnumType",
+  "namespace": "pl.pb.avroexample.types.avsc",
+  "symbols": [
+    "Enum1",
+    "Enum2",
+    "Enum3",
+    "Enum4"
+  ]
+}

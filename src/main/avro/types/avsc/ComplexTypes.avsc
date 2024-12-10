@@ -1,0 +1,63 @@
+{
+  "type": "record",
+  "name": "ComplexTypes",
+  "namespace": "pl.pb.avroexample.types.avsc",
+  "fields": [
+    {
+      "name": "enumType",
+      "type": {
+        "type": "enum",
+        "name": "EnumType",
+        "symbols": [
+          "Enum1",
+          "Enum2",
+          "Enum3",
+          "Enum4"
+        ]
+      }
+    },
+    {
+      "name": "arrayTypes",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    },
+    {
+      "name": "mapTypes",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "unionTypes",
+      "type": [
+        "null",
+        "string",
+        "int"
+      ]
+    },
+    {
+      "name": "fixedTypes",
+      "type": {
+        "type": "fixed",
+        "name": "MD5",
+        "size": 16
+      }
+    },
+    {
+      "name": "nestedComplexTypes",
+      "type": {
+        "type": "record",
+        "name": "NestedComplexTypes",
+        "fields": [
+          {
+            "name": "nestedComplexTypesValue",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+@namespace("pl.pb.avroexample.rpcmessages.avdl")
+protocol RpcMessageData {
+	error Error {
+
+
+	}
+
+	void logMessage(string message);
+
+	int add(int foo, int bar = 0);
+
+	void throwError() throws Error;
+
+	void runAndForget(string message) oneway;//only for Rpc comunication
+}

@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "PrimitiveTypes",
+  "namespace": "pl.pb.avroexample.types.avsc",
+  "fields": [
+    {
+      "name": "someInt",
+      "type": "int"
+    },
+    {
+      "name": "someLong",
+      "type": "long"
+    },
+    {
+      "name": "someString",
+      "type": "string"
+    },
+    {
+      "name": "someBoolean",
+      "type": "boolean"
+    },
+    {
+      "name": "someFloat",
+      "type": "float"
+    },
+    {
+      "name": "someDouble",
+      "type": "double"
+    },
+    {
+      "name": "someNull",
+      "type": "null"
+    },
+    {
+      "name": "someBytes",
+      "type": "bytes"
+    }
+  ]
+}

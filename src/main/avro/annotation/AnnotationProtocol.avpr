@@ -1,0 +1,124 @@
+{
+  "protocol": "AnnotationData",
+  "namespace": "pl.pb.avroexample.annotation.avpr",
+  "types": [
+    {
+      "type": "record",
+      "name": "MetadataKey",
+      "fields": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "OrderItem",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": {
+            "type": "string",
+            "java-class": "java.math.BigDecimal"
+          }
+        },
+        {
+          "name": "metadata",
+          "type": {
+            "type": "map",
+            "values": "string",
+            "java-key-class": "pl.pb.avroexample.annotation.avpr.MetadataKey"
+          }
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "User",
+      "fields": [
+        {
+          "name": "fullname",
+          "type": "string"
+        },
+        {
+          "name": "age",
+          "type": "int",
+          "order": "descending"
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "order": "ignore"
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "UserInfo",
+      "namespace": "pl.pb.avroexample.annotation.avpr.api",
+      "fields": [
+        {
+          "name": "id",
+          "type": {
+            "type": "string",
+            "logicalType": "uuid"
+          }
+        },
+        {
+          "name": "userName",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "UserInfo",
+      "namespace": "pl.pb.avroexample.annotation.avpr.dto",
+      "fields": [
+        {
+          "name": "id",
+          "type": {
+            "type": "string",
+            "logicalType": "uuid"
+          }
+        },
+        {
+          "name": "userName",
+          "type": "string"
+        },
+        {
+          "name": "fullname",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "type": "record",
+      "name": "Person",
+      "fields": [
+        {
+          "name": "fullname",
+          "type": "string",
+          "aliases": [
+            "name",
+            "firstAndSecondName"
+          ]
+        }
+      ],
+      "aliases": [
+        "pl.pb.avroexample.annotation.avpr.v1.Person",
+        "pl.pb.avroexample.annotation.avpr.v2.Person"
+      ]
+    }
+  ],
+  "messages": {}
+}

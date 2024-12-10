@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "UserInfo",
+  "namespace": "pl.pb.avroexample.annotation.avsc.dto",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "userName",
+      "type": "string"
+    },
+    {
+      "name": "fullname",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    }
+  ]
+}

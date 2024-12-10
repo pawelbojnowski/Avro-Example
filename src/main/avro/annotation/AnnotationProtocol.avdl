@@ -1,0 +1,43 @@
+@namespace("pl.pb.avroexample.annotation.avdl")
+protocol AnnotationData {
+
+	// @java-class and @java-key-class
+	record MetadataKey {
+		string name;
+	}
+
+	record OrderItem {
+		string Name;
+		@java-class("java.math.BigDecimal") string price;
+		@java-key-class("pl.pb.avroexample.annotation.avdl.MetadataKey") map<string> metadata;
+	}
+
+	// @order
+	record User {
+		string @order("ascending") fullname;
+		int @order("descending") age;
+		string @order("ignore") phone;
+	}
+
+	// @namespace
+	@namespace("pl.pb.avroexample.annotation.avdl.api")
+	record UserInfo {
+		uuid id;
+		string userName;
+	}
+
+	@namespace("pl.pb.avroexample.annotation.avdl.dto")
+	record UserInfo {
+		uuid id;
+		string userName;
+		string fullname;
+		string email;
+	}
+
+	// @aliases
+	@aliases(["pl.pb.avroexample.annotation.avdl.v1.Person", "pl.pb.avroexample.annotation.avdl.v2.Person"])
+	record Person {
+
+		string @aliases(["name", "firstAndSecondName"]) fullname;
+	}
+}

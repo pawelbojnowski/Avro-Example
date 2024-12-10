@@ -1,0 +1,15 @@
+{
+  "type": "error",
+  "name": "ErrorMessage",
+  "namespace": "pl.pb.avroexample.errormessage.avsc",
+  "fields": [
+    {
+      "name": "stacktrace",
+      "type": "string"
+    },
+    {
+      "name": "message",
+      "type": "string"
+    }
+  ]
+}

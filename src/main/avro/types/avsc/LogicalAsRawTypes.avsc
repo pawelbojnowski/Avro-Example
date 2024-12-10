@@ -1,0 +1,63 @@
+{
+  "type": "record",
+  "name": "LogicalAsRawTypes",
+  "namespace": "pl.pb.avroexample.types.avsc",
+  "fields": [
+    {
+      "name": "someDate",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      }
+    },
+    {
+      "name": "someDimeMillis",
+      "type": {
+        "type": "int",
+        "logicalType": "time-millis"
+      }
+    },
+    {
+      "name": "someTimeMicros",
+      "type": {
+        "type": "long",
+        "logicalType": "time-micros"
+      }
+    },
+    {
+      "name": "someTimestampMillis",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "someTimestampMicros",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      }
+    },
+    {
+      "name": "someTimedelta",
+      "type": {
+        "type": "double",
+        "logicalType": "timedelta"
+      }
+    },
+    {
+      "name": "someUuid",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "someDecimal",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal(9,2))"
+      }
+    }
+  ]
+}

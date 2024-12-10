@@ -1,0 +1,11 @@
+@namespace("pl.pb.avroexample.fields.avdl")
+protocol FieldsData {
+
+	record FieldsTypes {
+		string? optionalFiled;
+		// field can have null or noo-nul value.
+		string withDefaultValue = "some value";
+		union{string, float} fieldAcceptDiffrettypes;
+	}
+
+}

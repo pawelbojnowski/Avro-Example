@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "pl.pb.avroexample.annotation.avsc",
+  "fields": [
+    {
+      "name": "fullname",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "order": "descending"
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "order": "ignore"
+    }
+  ]
+}

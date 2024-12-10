@@ -1,0 +1,33 @@
+{
+  "protocol": "FieldsData",
+  "namespace": "pl.pb.avroexample.fields.avpr",
+  "types": [
+    {
+      "type": "record",
+      "name": "FieldsTypes",
+      "fields": [
+        {
+          "name": "optionalFiled",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        {
+          "name": "withDefaultValue",
+          "type": "string",
+          "default": "some value"
+        },
+        {
+          "name": "fieldAcceptDiffrettypes",
+          "type": [
+            "null",
+            "string",
+            "float"
+          ]
+        }
+      ]
+    }
+  ],
+  "messages": {}
+}

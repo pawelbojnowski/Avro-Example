@@ -1,0 +1,53 @@
+{
+  "protocol": "RpcMessageData",
+  "namespace": "pl.pb.avroexample.rpcmessages.avpr",
+  "types": [
+    {
+      "type": "error",
+      "name": "Error",
+      "fields": []
+    }
+  ],
+  "messages": {
+    "logMessage": {
+      "request": [
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "response": "null"
+    },
+    "add": {
+      "request": [
+        {
+          "name": "foo",
+          "type": "int"
+        },
+        {
+          "name": "bar",
+          "type": "int",
+          "default": 0
+        }
+      ],
+      "response": "int"
+    },
+    "throwError": {
+      "request": [],
+      "response": "null",
+      "errors": [
+        "Error"
+      ]
+    },
+    "runAndForget": {
+      "request": [
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "response": "null",
+      "one-way": true
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "fixed",
+  "name": "MD5",
+  "namespace": "pl.pb.avroexample.types.avsc",
+  "size": 16
+}
